@@ -6,6 +6,9 @@ __pycache__
 db.sqlite3
 media
 
+# Mac #
+*.DS_Store
+
 # Backup files # 
 *.bak 
 
