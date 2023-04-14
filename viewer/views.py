@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.http import FileResponse
+import os
 
 
-def index(request):
-    return render(request, "viewer/index.html")
+def show_pdf(request, file_name):
+    filepath = os.path.join('static/', file_name)
+    return FileResponse(open(filepath, 'rb'), content_type='application/pdf')
