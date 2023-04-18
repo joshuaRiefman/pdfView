@@ -2,3 +2,5 @@
 .git
 .gitignore
 venv
+node_modules
+build
