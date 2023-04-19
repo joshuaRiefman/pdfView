@@ -1,10 +1,20 @@
 version: "2.1"
 
 services:
-  app:
+  server:
     build:
-      context: .
+      context: server
+    command: bash -c "python server/manage.py makemigrations && python server/manage.py migrate && python server/manage.py runserver 0.0.0.0:8000"
+    container_name: server
     volumes:
-      - ./src:/app/src
+      - .:/server
     ports:
-      - 3000:3000
+      - "8000:8000"
+  client:
+    container_name: client
+    build:
+      context: client
+    volumes:
+      - .:/client
+    ports:
+      - "3000:3000"
