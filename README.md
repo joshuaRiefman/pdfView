@@ -1,6 +1,7 @@
 # pdfView
 A simple tool for websites to link to a page containing a PDF,  viewable for their users.
 
+**pdfView is in early stages of development.**
 
 ## How Can I Use pdfView?
 There are two ways of using pdfView for your own purposes. The first and recommended way by cloning then building a 
